@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Parallax</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', 'sans-serif';
+        }
+
+        body {
+            min-height: 100vh;
+
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #fff;
+            user-select: none;
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 6px 15px;
+            transition: .5s;
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            color: #333;
+        }
+
+        .navigation a span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0;
+            background: #fff;
+            border-radius: 30px;
+            transform: scale(0);
+            transition: .5s;
+        }
+
+        .navigation a:hover span,
+        .navigation a.active span {
+            transform: scale(1);
+            opacity: 1;
+
+        }
+
+        .parallex {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/images/background.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #text {
+            position: absolute;
+            font-size: 6em;
+            color: #1b283a;
+            text-shadow: 2px 4px 5px #f9f9f9;
+        }
+
+        .parallex img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+
+        }
+
+        .parallex img#gate-left {
+            position: fixed;
+            transform: translate(-282px);
+        }
+
+        .parallex img#gate-right {
+            position: fixed;
+            transform: translate(305px);
+        }
+        .sec
+        {
+            position: relative;
+            background: #020912;
+            padding: 30px 100px;
+
+        }
+        .sec h2
+        {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .sec p
+        {
+            font-size: 1em;
+            color: #fff;
+            font-weight: 300;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="position: fixed;">
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#" class="active">Home<span></span></a>
+            <a href="#">About<span></span></a>
+            <a href="#">Service<span></span></a>
+            <a href="#">Contact<span></span></a>
+        </nav>
+    </header>
+    <section class="parallex">
+        <h2 id="text">Parallex Website</h2>
+        <img src="/images/tree-left.png" id="tree-left">
+        <img src="/images/tree-right.png" id="tree-right">
+        <img src="/images/gate-left.png" id="gate-left">
+        <img src="/images/gate-right.png" id="gate-right">
+        <img src="/images/grass.png" id="grass">
+    </section>
+    <section class="sec">
+        <h2>Parallex Scrolling Website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate tempore odio, quod libero, sed
+            repellendus esse nostrum eum autem eaque voluptate inventore consequatur. Pariatur iste officiis perferendis
+            modi quidem consequatur, harum tempora molestias dicta sint explicabo, commodi tenetur quam repellat
+            consectetur! Corrupti debitis ducimus ipsam et veritatis quam esse enim eligendi! Saepe optio porro quaerat
+            animi vitae perspiciatis eveniet corrupti qui, est quos perferendis accusantium nemo quis sed adipisci
+            aperiam deleniti, tenetur numquam aliquam ducimus eligendi? Id error saepe ex inventore sed? Iste officiis,
+            iure maiores deleniti nobis dolor obcaecati quo, facere assumenda suscipit temporibus, praesentium quae sit.
+            Facere quod eius dolorem molestias. Aliquid aperiam ipsam quia quam facere nisi! Incidunt natus veritatis
+            quisquam molestiae unde veniam excepturi perferendis.</p><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate tempore odio, quod libero, sed
+                repellendus esse nostrum eum autem eaque voluptate inventore consequatur. Pariatur iste officiis perferendis
+                modi quidem consequatur, harum tempora molestias dicta sint explicabo, commodi tenetur quam repellat
+                consectetur! Corrupti debitis ducimus ipsam et veritatis quam esse enim eligendi! Saepe optio porro quaerat
+                animi vitae perspiciatis eveniet corrupti qui, est quos perferendis accusantium nemo quis sed adipisci
+                aperiam deleniti, tenetur numquam aliquam ducimus eligendi? Id error saepe ex inventore sed? Iste officiis,
+                iure maiores deleniti nobis dolor obcaecati quo, facere assumenda suscipit temporibus, praesentium quae sit.
+                Facere quod eius dolorem molestias. Aliquid aperiam ipsam quia quam facere nisi! Incidunt natus veritatis
+                quisquam molestiae unde veniam excepturi perferendis.</p><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cupiditate tempore odio, quod libero, sed
+                    repellendus esse nostrum eum autem eaque voluptate inventore consequatur. Pariatur iste officiis perferendis
+                    modi quidem consequatur, harum tempora molestias dicta sint explicabo, commodi tenetur quam repellat
+                    consectetur! Corrupti debitis ducimus ipsam et veritatis quam esse enim eligendi! Saepe optio porro quaerat
+                    animi vitae perspiciatis eveniet corrupti qui, est quos perferendis accusantium nemo quis sed adipisci
+                    aperiam deleniti, tenetur numquam aliquam ducimus eligendi? Id error saepe ex inventore sed? Iste officiis,
+                    iure maiores deleniti nobis dolor obcaecati quo, facere assumenda suscipit temporibus, praesentium quae sit.
+                    Facere quod eius dolorem molestias. Aliquid aperiam ipsam quia quam facere nisi! Incidunt natus veritatis
+                    quisquam molestiae unde veniam excepturi perferendis.</p><br><br>
+    </section>
+    <script>
+        let text = document.getElementById('text')
+        let treeLeft = document.getElementById('tree-left')
+        let treeRight = document.getElementById('tree-right')
+        let gateLeft = document.getElementById('gate-left')
+        let gateRight = document.getElementById('gate-right')
+        window.addEventListener('scroll',() => {
+            let value = window.scrollY;
+            text.style.marginTop = value * 2.5 + 'px';
+            treeLeft.style.left = value * -1.5 + 'px';
+            treeRight.style.left = value * 1.5 + 'px';
+            gateLeft.style.left = value * 0.5 + 'px';
+            gateRight.style.left = value * -0.5 + 'px';
+
+        });
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
